@@ -1,4 +1,4 @@
-<title>JSON Primer</title>
+<title>Cartilha JSON</title>
 
 <meta charset="utf-8">
 
@@ -10,11 +10,11 @@
 
 <script src="../../../script.js"></script>
 
-<h2 id="json">JSON Primer</h2>
+<h2 id="json">Cartilha JSON</h2>
 
-<p>CouchDB uses <em>JavaScript Object Notation</em> (JSON) for data storage, a lightweight format based on a subset of JavaScipt syntax. One of the best bits about JSON is that it’s easy to read and write by hand, much more so than something like XML. We can parse it naturally with JavaScript because it shares part of the same syntax. This really comes in handy when we’re building dynamic web applications and we want to fetch some data from the server.
+<p>O CouchDB usa <em>JavaScript Object Notation</em> (JSON) para armaznamento de dados, um formato leve baseado em um sub-conjunto da sintaxe JavaScript. Uma das melhores coisas sobre o JSON é que ele é fácil de ler e escrever, muito mais que algo como XML. Nós podemos fazer parser naturalmente com JavaScript, por ele compartilhar da mesma sintaxe. Isto realmente traz uma facilidade quando estamos construindo aplicações web dinâmicas e queremos buscar algum dado do servidor.
 
-<p>Here’s a sample JSON document:
+<p>Aqui está um exemplo de documento JSON:
 
 <pre>
 {
@@ -30,53 +30,53 @@
 }
 </pre>
 
-<p>You can see that the general structure is based around key/value pairs and lists of things.
+<p>Você pode notar que a estrutura geral é baseada em torno de pares chave/valor e lista de valores.
 
-<h3 id="types">Data Types</h3>
+<h3 id="types">Tipos de Dados</h3>
 
-<p>JSON has a number of basic data types you can use. We’ll cover them all here.
+<p>O JSON tem um número de tipos de dados básicos que você pode usar. Nós iremos cobrir todos aqui.
 
-<h4 id="numbers">Numbers</h4>
+<h4 id="numbers">Números</h4>
 
-<p>You can have positive integers: <code>"Count": 253</code>
+<p>Você pode ter inteiros positivos: <code>"Count": 253</code>
 
-<p>Or negative integers: <code>"Score": -19</code>
+<p>ou inteiros negativos: <code>"Score": -19</code>
 
-<p>Or floating-point numbers: <code>"Area": 456.31</code>
+<p>ou ponto flutuante: <code>"Area": 456.31</code>
 
 <div class="aside warning">
-
-<p>There is a subtle but important difference between floating-point numbers and decimals. When you use a number like <code>15.7</code>, this will be interpreted as <code>15.699999999999999</code> by most clients, which may be problematic for your application. For this reason, currency values are usually better represented as strings in JSON. A string like <code>"15.7"</code> will be interpreted as <code>"15.7"</code> by every JSON client.
+	
+<p>Existe uma diferença sútil entre números de ponto flutuante e decimais. Quando você usa um número como <code>15.7</code>, isto será interpretado como <code>15.699999999999999</code> pela maioria do clientes JSON, o que poder ser problemático para sua aplicação. Por esta razão, valores monetários são normalmente melhores representados como strings em JSON. Uma string com <code>"15.7"</code> será interpretada como <code>"15.7"</code> por qualquer cliente JSON.
 
 </div>
 
-<p>Or scientific notation: <code>"Density": 5.6e+24</code>
+<p>ou notação ciêntífica: <code>"Density": 5.6e+24</code>
 
 <h4 id="strings">Strings</h4>
 
-<p>You can use strings for values:
+<p>Você pode usar strings para valores:
 
 <pre>
 "Author": "Rusty"
 </pre>
 
-<p>You have to escape some special characters, like tabs or newlines:
+<p>Você tem escapar alguns caractéres especiais, como tabs ou quebra de linhas:
 
 <pre>
 "poem": "May I compare thee to some\n\tsalty plankton."
 </pre>
 
-<p>The <a href="http://www.json.org">JSON site</a> has details on what needs to be escaped.
+<p>O <a href="http://www.json.org">site do JSON</a>tem detalhes sobre o que precisa ser escapado.
 
 <h4 id="booleans">Booleans</h4>
 
-<p>You can have boolean true values:
+<p>Você pode ter valores boolean verdadeiro:
 
 <pre>
 "Draft": true
 </pre>
 
-<p>Or boolean false values:
+<p>ou valores boolean falso:
 
 <pre>
 "Draft": false
@@ -84,29 +84,29 @@
 
 <h4 id="arrays">Arrays</h4>
 
-<p>An array is a list of values:
+<p>Um array é uma lista de valores:
 
 <pre>
 "Tags": ["plankton", "baseball", "decisions"]
 </pre>
 
-<p>An array can contain any other data type, including arrays:
+<p>Um array pode conter qualquer outro tipo de dado, inclusive arrays:
 
 <pre>
 "Context": ["dog", [1, true], {"Location": "puddle"}]
 </pre>
 
-<h4 id="objects">Objects</h4>
+<h4 id="objects">Objetos</h4>
 
-<p>An object is a list of key/value pairs:
+<p>Um objeto é uma lista de pares chave/valor:
 
 <pre>
 {"Subject": "I like Plankton", "Author": "Rusty"}
 </pre>
 
-<h4 id="nulls">Nulls</h4>
+<h4 id="nulls">Nulos</h4>
 
-<p>You can have null values:
+<p>Você pode ter valores nulos:
 
 <pre>
 "Surname": null
