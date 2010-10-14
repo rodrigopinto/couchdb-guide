@@ -1,4 +1,4 @@
-<title>Installing on Mac OS X</title>
+<title>Instalando no Mac OS X</title>
 
 <meta charset="utf-8">
 
@@ -10,47 +10,47 @@
 
 <script src="../../../script.js"></script>
 
-<h2 id="mac">Installing on Mac OS X</h2>
+<h2 id="mac">Instalando no Mac OS X</h2>
 
 <h3 id="couchdbx">CouchDBX</h3>
 
-<p>The easiest way to get started with CouchDB on Mac OS X is by downloading <a href="http://janl.github.com/couchdbx/">CouchDBX</a>. This unofficial application doesn’t install anything to your system and can be run with a single double-click. Note, however, that for more serious use, it is recommended that you do a traditional installation with something like <a href="http://github.com/mxcl/homebrew/">Homebrew</a>.
+<p>O caminho mais fácil para instalar o CouchDB no Mac OS X é baixando o <a href="http://janl.github.com/couchdbx/">CouchDBX</a>.  Está aplicação não oficial não instala qualquer coisa em seu sistema e pode ser executada apenas com um duplo clique. Note, entretanto que para um uso mais sério, é recomendado você fazer a instalação tradicional com alguma coisa do tipo <a href="http://github.com/mxcl/homebrew/">Homebrew</a>.
 
 <h3 id="homebrew">Homebrew</h3>
 
-<p>Homebrew is a recent addition to the software management tools on Mac OS X. Its premise is zero configuration, heavy optimizations, and a beer theme. Get Homebrew from <a href="http://github.com/mxcl/homebrew">http://github.com/mxcl/homebrew</a>. The installation instructions are minimal. Once you are set up, run:
+<p>Homebrew é uma adição recente para as ferramentas de gerenciamento de software do Mas OS X. A premisa é configuração zero, otimizações peasadas e um tema para cerveja. Baixe o Homebrew a partir de <a href="http://github.com/mxcl/homebrew">http://github.com/mxcl/homebrew</a>. As instruções de instalação são minimas. Uma vez configurado, execute: 
 
 <pre>
 brew install couchdb
 </pre>
 
-<p>in the Terminal and wait until it is done. To start CouchDB, simply run:
+<p>no terminal e aguarde até finalizar. Para iniciar o CouchDB, simplesmente execute:
 
 <pre>
 couchdb
 </pre>
 
-<p>to see all the startup options available to you, run:
+<p>para ver todas as opções de inicialização disponíveis, execute:
 
 <pre>
 couchdb -h
 </pre>
 
-<p>This tells you how to run CouchDB in the background, among other useful hints.
+<p>Este comando mostra como rodar o CouchDB em background, entre outras formas.
 
-<p>To verify that CouchDB is indeed running, open your browser and visit <a href="http://127.0.0.1:5984/_utils/index.html">http://127.0.0.1:5984/_utils/index.html</a>.
+<p>Para verificar que o CouchDB está realmente rodando, abra seu browser na url <a href="http://127.0.0.1:5984/_utils/index.html">http://127.0.0.1:5984/_utils/index.html</a>.
 
 <h3 id="macports">MacPorts</h3>
 
-<p>MacPorts is the de facto package management tool for Mac OS X. While not an official part of the operating system, it can be used to simplify the process of installing FLOSS software on your machine. Before you can install CouchDB with MacPorts, you need to download and install <a href="http://www.macports.org/install.php">MacPorts</a>.
+<p>MacPorts é de fato a ferramenta para gerênciamento de pacote para Mac OS X. Enquanto não é parte oficial do sistema operacional, ele pode ser usado para simplificar o processo ed instalação de software FLOSS na sua máquina. Antes de você poder instalar o CouchDB com MacPorts, você precisa baixar e instalar o <a href="http://www.macports.org/install.php">MacPorts</a>.
 
-<p>Make sure your MacPorts installation is up-to-date by running:
+<p>Tenha certeza que sua instalação do MacPorts está atualizada rodando:
 
 <pre>
 sudo port selfupdate
 </pre>
 
-<p>You can install CouchDB with MacPorts by running:
+<p>Você pode instalar o CouchDB com MacPorts rodando:
 
 <pre>
 sudo port install couchdb
@@ -62,13 +62,13 @@ sudo port install couchdb
 sudo port upgrade couchdb
 </pre>
 
-<p>Mac OS X has a service management framework called <code>launchd</code> that can be used to start, stop, or manage system daemons. You can use this to start CouchDB automatically when the system boots up. If you want to add CouchDB to your <code>launchd</code> configuration, you should run:
+<p>Mac OS X tem um framework de gerênciamento de serviço chamado <code>launchd</code> que pode ser usado para iniciar, parar e ou gerenciar os daemons do sistema. Você pode usá-lo para iniciar o CouchDB automaticamente quando o sistema iniciar. Se você quiser adicionar o CouchDB para a configuração do <code>launchd</code>, rode:
 
 <pre>
 sudo launchctl load -w /opt/local/Library/LaunchDaemons/org.apache.couchdb.plist
 </pre>
 
-<p>After running this command, CouchDB should be available at:
+<p>Após rodar este comando, CouchDB deve estar disponível em:
 
 <blockquote>
 
@@ -76,4 +76,4 @@ sudo launchctl load -w /opt/local/Library/LaunchDaemons/org.apache.couchdb.plist
 
 </blockquote>
 
-<p>CouchDB will also be started and stopped along with the operating system.
+<p>CouchDB também será inicilizado e parado juntamente com o sistema operacional.
